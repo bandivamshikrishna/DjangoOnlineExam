@@ -1,0 +1,40 @@
+<style>
+    body{margin:0px;}
+    .container{margin-left: 500px;
+               margin-right: 500px;
+               margin-top:50px;
+               height:500px;
+               width:500px;
+               border-radius:6px;
+               border:2px solid black;}
+               input[type=text], select {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.password {
+    width:85%;
+    padding:10px;
+border: 2px solid black;
+border-radius:4px ;}
+.next{background-color:rgb(57, 57, 182);
+color:whitesmoke;
+width:90%;
+height:50px;
+font-size: 20px;
+border-radius:4px ;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.container1{margin-left: 500px;
+               margin-right: 500px;
+               margin-top:50px;
+               height:50px;
+               width:500px;
+               border-radius:6px;
+               border:2px solid black;
+               }
+</style>
