@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+{% load widget_tweaks %}
+{% load static %}
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +10,24 @@
     <title>signin</title>
 </head>
 <style>
+=======
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>signin</title>
+        <style>
+            
+>>>>>>> 69a21cbf229cc081baf3fa6412ee543dbb4aa6ea
     body{margin:0px;}
     .container{margin-left: 500px;
                margin-right: 500px;
                margin-top:50px;
+<<<<<<< HEAD
                height:430px;
+=======
+               height:500px;
+>>>>>>> 69a21cbf229cc081baf3fa6412ee543dbb4aa6ea
                width:500px;
                border-radius:6px;
                border:2px solid black;}
@@ -45,6 +61,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
                border-radius:6px;
                border:2px solid black;
                }
+<<<<<<< HEAD
 </style>
 
 <body>
@@ -71,4 +88,33 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 <label style="font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Does not have an Account &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;<a href="#create an account">?create an account</a></label>
 </div>
 </body>
+=======
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center;font-size: 50px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sign in</h1>
+        <div class="container">
+            <form style="margin:20px;" method='POST'>
+                {% csrf_token %}
+                <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px"for="Role">Role:</label><br>
+                <select id="Role" name="Role">
+                    <option value="student">Student</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Admin">Admin</option>
+                </select><br><br>
+                <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px">username:</label><br>
+                <input type="text" class="text" placeholder="Username"><br><br>
+                <label style="font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">password: &emsp;
+                &ensp;&ensp;&ensp;&ensp;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#forget password">Forget password?</a></label><br><br>
+                <input type="password" class="password" placeholder="password"><br><br>
+                <input type="submit" class="next" value="next">
+            </form>
+        </div>
+        <div class="container1">
+            <br>
+            <label style="font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Doesn't have an Account?  <a href="#create an account">create an account</a></label>
+        </div>
+    </body>
+>>>>>>> 69a21cbf229cc081baf3fa6412ee543dbb4aa6ea
 </html>
