@@ -20,30 +20,19 @@
                 overflow: hidden;
                 background-color: #333;
                 position: fixed;
-                margin-top: -5%;
+                margin-top: -25px;
+            }
+            li button{
+                display: block;
+                background-color: #333;
+                color: white;
+                width: 100px;
+                padding: 10px;
+                text-align: center;
+                radius:8px;
+                border-radius: 8px solid white;
             }
             
-            li .button{
-                background-color: #333;
-                color:white;
-                display: inline-block;
-                text-align: center;
-                padding: 10px;
-                text-decoration: none;
-                border: 2px solid white;
-                border-radius: 8px;
-            }
-            li .button1{
-                margin-left: -75px;
-                background-color: #333;
-                color:white;
-                display: inline-block;
-                text-align: center;
-                padding: 10px;
-                text-decoration: none;
-                border: 2px solid white;
-                border-radius: 8px;
-            }
             .container{
                 width:40%;
                 margin-top: 5%;
@@ -87,10 +76,10 @@
     </head>
     <body>
         <ul>
-            <li style="float:right"><button class="button">sign up</button></a></li>
-            <li style="float:right"><button class="button1">sign in</button></li>
+           <div> <li style="float:right"><button onclick="document.location.href='#'" >sign up</button></li>
+            <li style="float:right"><button onclick="document.location.href='https://www.facebook.com/'" >sign in</button></li>
             <li style="float:left"><img src="#" width="50" height="40"> </li>
-            
+           </div>
         </ul>
         <div class="container">
             <div class="content">
@@ -115,7 +104,7 @@
                     <a class="a2" href="#"><i class="fa fa-database" style="font-size:25px;color:darkturquoise"></i><br>Difficulty Level Analysis</a></div><br>
                     <a href="#"><i class="fa fa-columns" style="font-size:25px;color:darkturquoise"></i><br>slection wise performance</a>
                     <div class="a2"> <a class="a2" href="#"><i class="fa fa-pie-chart" style="font-size:25px;color:darkturquoise"></i><br>Comparison Report</a></div><br>
-                        <a href="#"><i class="fa fa-tasks" style="font-size:25px;color:darkturquoise"></i><br>section wise mark distribution</a>
+                    <a href="#"><i class="fa fa-tasks" style="font-size:25px;color:darkturquoise"></i><br>section wise mark distribution</a>
                         <div class="a2"> <a class="a2" href="#"><i class="fa fa-bar-chart" style="font-size:25px;color:darkturquoise"></i><br>In-Depth Analysis</a></div>
                     </div>
                 </div>
