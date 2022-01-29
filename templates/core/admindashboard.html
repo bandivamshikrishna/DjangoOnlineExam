@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+  body{margin:0px;
+background-color: whitesmoke;}
+.navbar{
+    width:100%;
+    background-color:wheat;
+    overflow: hidden;
+    }
+.navbar a{ float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:30px;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif}
+    .container{background-color: whitesmoke;
+    height:100%;
+    width:100%;
+}
+ .new{margin-top:100px;
+    margin-left: 20px;
+     background-color:beige;
+color:black;
+font-size: 25px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+width: 200px;
+height:70px;
+border:2px solid darkblue;
+border-radius: 4px;}
+.subject{
+background-color:beige;
+color:black;
+font-size: 25px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+width: 300px;
+height:70px;
+border:2px solid darkblue;
+border-radius:4px;}
+#table {margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td, #table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:darkgray;
+  color: black;
+}   
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="#home"><i class="fa fa-fw fa-home"></i></a>
+    <a href="#question bank"><i class="fa fa-angle-right"></i>&ensp;&ensp;&ensp;Question Bank</a>
+    <a href="subject"><i class="fa fa-angle-right"></i>&ensp;&ensp;&ensp;Subject</a> 
+</div>
+<div class="container">
+    <a href="#"><button type="button"class="new"><i class="fa fa-plus-circle" ></i>New</button></a><br><br><br>
+    <a href="#"><button type="button"class="subject"><i class="fa fa-book"></i>Total subject(s) count:3</button></a>
+    <table id="table">
+             <tr>
+              <th>sl.no</th>
+              <th>subject</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>python</td>
+              <td><a href="#"><i class="fa fa-pencil"></i></a></td>
+            <td><a href="#"><i class="fa fa-trash"></i></a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>java</td>
+              <td><a href="#"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#"><i class="fa fa-trash"></i></a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>test subject</td>
+              <td><a href="#"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#"><i class="fa fa-trash"></i></a></td>
+            </tr>
+           
+          
+          
+    </table>
+</div>
+</body>
+</html>
