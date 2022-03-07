@@ -124,6 +124,15 @@
             margin-left : 170px;
             width : 80px;
         }
+        
+        .container{
+            margin-left:20%;
+            }
+            form{margin-left: 200px;
+            margin-top:200px;
+            width: 500;}
+            
+         
 
     </style>
 </head>
@@ -166,8 +175,10 @@
 
     <div class="container">
     <form>        
-            
-            </form>
+        {% block content %}
+        
+        {% endblock content %}
+    </form>
     </div>
     
 </body>
