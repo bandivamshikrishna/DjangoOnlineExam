@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "robot",sans-serif;
+        }
+        header {
+            position :fixed;
+            background-color: aqua;
+            padding :25px;
+            width: 100%;
+            height: 5px;
+            margin-top: -20px;
+        }
+        .left-area h3 {
+            color : #fff;
+            margin :0;
+            text-decoration : upper case;
+            font-size: 22px;
+            font-weight :900;
+        }
+        .logout-btn {
+            padding: 5px;
+            background: black;
+            text-decoration: none;
+            float: right;
+            margin-top: -15px;
+            margin-right: 60px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            color:#fff;
+            transition : 0.5s;
+            transition-property: background;
+        }
+        .sidebar {
+            background: rebeccapurple;
+            margin-top :-50px;
+            padding-top :115px;
+            position: fixed;
+            left : 0;
+            width :17%;
+            height :100%;
+            transition : 0.5s;
+            transition-property: left;
+        }
+        .sidebar .profile-image {
+            width : 100px;
+            height : 100px;
+            margin-right: 70px;
+            border-radius: 100px;
+            margin-bottom : 10px;
+        }
+        .sidebar h4{
+            color : #ccc;
+            margin-top : 0;
+            margin-bottom : 20px;
+            margin-right: 70px;
+    
+        }
+        .sidebar a {
+            color :white;
+            display :block;
+            width: 100%;
+            line-height : 60px;
+            text-decoration: none;
+            padding-left: 40px;
+            box-sizing: border-box;
+            transition :0.5s;
+            transition-property: left;
+        }
+        .sidebar #sidebar_btn {
+            z-index: 1;
+            position: absolute;
+            color: white;
+            left: 80%;
+            top: -5px;
+            font-size: 26px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.5s;
+            transition-property: color;
+            
+        }
+    
+        .sidebar a:hover{
+            background : #19b3d3;
+
+        }
+        .sidebar  i{
+            padding-right: 10px;
+            margin-top: 45px;
+
+        } 
+        
+        label #sidebar_btn:hover{
+            color : #19b3d3;
+
+        }
+        #check:checked ~ .sidebar{
+            left: -190px;
+        
+        }
+        #check:checked~ .sidebar a span {
+            display:none;
+        
+        } 
+#check:checked~ .sidebar a{
+            font-size : 20px;
+            margin-left : 170px;
+            width : 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="check">
+<!--header area starts-->
+<header>
+    
+    
+        
+
+    <div class="right-area">
+        <a href="#" class="logout-btn">logout</a>
+
+    </div>
+</header>
+<!--header area star-->
+<!--side bar start-->
+<div class="sidebar">
+    <label for="check">
+    <div class="bars">
+    <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    </div>
+<center>
+            <img src="teach(2).png" class="profile-image" alt=" ">
+        <h4> Teacher<br>
+            (sofiya)
+        </h4>
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+
+
+    </center>
+<!--side bar end-->
+
+<a href="#"><i class="fas fa-desktop"><span>desktop</span></i></a>
+<a href="#"><i class="fas fa-edit"><span>manage course</span></i></a>
+<a href="#"><i class="fas fa-question-circle"><span>manage question</span></i></a>
+</div>
+
+    <div class="container">
+    <form>        
+            
+            </form>
+    </div>
+    
+</body>
+</html>
