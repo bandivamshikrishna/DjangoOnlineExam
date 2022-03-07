@@ -2,15 +2,6 @@
 {% load widget_tweaks %}
 {% load static %}
 <html lang="en">
-<<<<<<< HEAD
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signin</title>
-</head>
-<style>
-=======
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,16 +9,11 @@
         <title>signin</title>
         <style>
             
->>>>>>> 69a21cbf229cc081baf3fa6412ee543dbb4aa6ea
     body{margin:0px;}
     .container{margin-left: 500px;
                margin-right: 500px;
                margin-top:50px;
-<<<<<<< HEAD
-               height:430px;
-=======
-               height:500px;
->>>>>>> 69a21cbf229cc081baf3fa6412ee543dbb4aa6ea
+               height:400px;
                width:500px;
                border-radius:6px;
                border:2px solid black;}
@@ -65,27 +51,25 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
     </head>
     <body>
         <h1 style="text-align:center;font-size: 50px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sign in</h1>
+        <label align="center" style="color:red">{{authform.non_field_errors}}</label>
         <div class="container">
-            <form style="margin:20px;" method='POST'>
+            <form style="margin:20px;" method='POST' novalidate>
                 {% csrf_token %}
-                <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px"for="Role">Role:</label><br>
-                <select id="Role" name="Role">
-                    <option value="student">Student</option>
-                    <option value="Teacher">Teacher</option>
-                    <option value="Admin">Admin</option>
-                </select><br><br>
                 <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 20px">username:</label><br>
-                <input type="text" class="text" placeholder="Username"><br><br>
+                {% render_field authform.username class="text" placeholder="Username" %} <br><br>
+                <label style="color:red">{{authform.username.errors}}</label>
                 <label style="font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">password: &emsp;
                 &ensp;&ensp;&ensp;&ensp;
                 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="#forget password">Forget password?</a></label><br><br>
-                <input type="password" class="password" placeholder="password"><br><br>
+                {% render_field authform.password class="password" placeholder="password" %} <br><br>
+                <label style="color:red">{{authform.password.errors}}</label>
                 <input type="submit" class="next" value="next">
+    
             </form>
         </div>
         <div class="container1">
             <br>
-            <label style="font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Doesn't have an Account?  <a href="#create an account">create an account</a></label>
+            <label style="font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">&ensp;&ensp;Doesn't have an Account ?  <a href="{% url 'signup' %}">create an account</a></label>
         </div>
     </body>
 </html>

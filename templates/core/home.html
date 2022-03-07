@@ -20,7 +20,7 @@
                 overflow: hidden;
                 background-color: #333;
                 position: fixed;
-                margin-top: -25px;
+                margin-top: -75px;
             }
             li button{
                 display: block;
@@ -76,8 +76,8 @@
     </head>
     <body>
         <ul>
-           <div> <li style="float:right"><button onclick="document.location.href='#'" >sign up</button></li>
-            <li style="float:right"><button onclick="document.location.href='https://www.facebook.com/'" >sign in</button></li>
+           <div> <li style="float:right"><button onclick="document.location.href='{% url 'signup' %}'" >sign up</button></li>
+            <li style="float:right"><button onclick="document.location.href='{% url 'signin' %}'" >sign in</button></li>
             <li style="float:left"><img src="#" width="50" height="40"> </li>
            </div>
         </ul>

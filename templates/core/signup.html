@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+{% load widget_tweaks %}
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -153,44 +157,38 @@ input[type="text"],select{
 
 <div class="container">
     <div class="row">
-      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+      <h2 style="text-align:center">SignUp with Social Media or Manually</h2>
       <div class="vl">
         <span class="vl-innertext">or</span>
       </div>
-
+  <form action="" method="post">
+    {% csrf_token %}
       <div class="col">
-        <a href="#" class="fb btn">
+        <a href="{% provider_login_url "facebook" method="js_sdk" %}" class="fb btn">
           <i class="fa fa-facebook fa-fw"></i> Signup with Facebook
          </a>
-        <a href="#" class="twitter btn">
-          <i class="fa fa-twitter fa-fw"></i> Signup with Twitter
-        </a>
-        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+        <a href="{% provider_login_url 'google' %}" class="google btn"><i class="fa fa-google fa-fw">
           </i> Signup with Google
         </a>
         <a href="#"class="linked-ln btn"><i class="fa fa-linkedin-square" >
       </i>    signup with linked ln
       </a>
-        <a href="#"class="github btn"><i class="fa fa-github">
+        <a href="{% provider_login_url 'github' %}"class="github btn"><i class="fa fa-github">
        </i>   signup with GitHub
       </a>
       </div>
 
       <div class="col">
         <label >Role:</label>
-    <select id="Role" name="Role">
-      <option value="student">Student</option>
-      <option value="Teacher">Teacher</option>
-      <option value="Admin">Admin</option>
-    </select>
+        {% render_field signupform.role %}
         <label>username:</label>
-        <input type="text" name="username" placeholder="Username" required>
+        {% render_field signupform.username placeholder="username" %}
         <label>Email:</label>
-        <input type="email"name="email"placeholder="Email@.com"required>
+        {% render_field signupform.email placeholder="example@gmail.com" %}
         <label>password:</label>
-        <input type="password" name="password" placeholder="Password" required>
-        <a href="#"><button type="button" class="btn1">create an account</button></a>
-       <p>Already Have an account?<a href="#sign in" >Sign in</a></p>
+        {% render_field signupform.password placeholder="password" %}
+        <input type="submit" class="btn1" value="Create An Account">
+       <p>Already Have an account ?<a href="{% url 'signin' %}" >  Sign in</a></p>
       </div>
       
     </div>
