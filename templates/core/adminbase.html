@@ -124,6 +124,25 @@
             margin-left : 170px;
             width : 80px;
         }
+        /* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
         
         .container{
             margin-left:20%;
@@ -132,6 +151,9 @@
             margin-top:200px;
             width: 500;}
             
+            
+            {% block style %}
+            {% endblock style %}
          
 
     </style>
@@ -159,8 +181,7 @@
     </div>
 <center>
             <img src="teach(2).png" class="profile-image" alt=" ">
-        <h4> Teacher<br>
-            (sofiya)
+        <h4>Admin<br>
         </h4>
         <i class="fas fa-bars" id="sidebar_btn"></i>
 
@@ -177,6 +198,9 @@
     <form>        
         {% block content %}
         
+            
+
+    
         {% endblock content %}
     </form>
     </div>
