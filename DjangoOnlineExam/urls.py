@@ -29,5 +29,6 @@ urlpatterns = [
     path('admindashboard/',views.admin_dashboard,name='admindashboard'),
     path('logout',views.account_logout,name='logout'),
     path('student/',views.student_form,name='student'),
+    path('admin/eb/',views.admin_examination_branch,name='admineb')
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
