@@ -71,13 +71,18 @@ def student_form(request):
     return render(request,'student/studentforms.html',{'student':student,'student2':student2})
 
 
+def account_logout(request):
+    logout(request)
+    return HttpResponseRedirect('/signin/')
+
+
 @login_required
 def admin_dashboard(request):
     return render(request,'core/admindashboard.html')
 
 
-def account_logout(request):
-    logout(request)
-    return HttpResponseRedirect('/signin/')
+@login_required
+def admin_examination_branch(request):
+    return render(request,'core/examinationbranch.html')
 
 
