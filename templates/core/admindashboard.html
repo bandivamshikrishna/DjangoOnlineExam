@@ -1,1 +1,102 @@
 {% extends 'core/adminbase.html' %}
+
+{% block style %}
+    .btn1{
+        background-color:red;
+        padding:105px;
+        width:450px;
+        border:none;
+        border-radius:8px;
+    }
+    .btn2{
+        width:200px;
+        padding:20px;
+        background-color:green;
+        border:none;
+        border-radius:8px;
+        margin-left:47%;
+    }
+    .vam2{
+        margin-top:-295px;
+    }
+    .btn3{
+        width:200px;
+        padding:20px;   
+        background-color:lightgreen;
+        border:none;
+        border-radius:8px;
+        margin-left:47%;
+        
+    }
+    .vam3{
+    margin-top:5%;
+    
+    }
+    .btn4{
+        width:200px;
+        padding:20px;   
+        background-color:yellow;
+        border:none;
+        border-radius:8px;
+        margin-left:47%;
+    }
+    .vam4{
+    margin-top:5%;
+    }
+    .btn5{
+        width:200px;
+        padding:20px;   
+        background-color:aques;
+        border:none;
+        border-radius:8px;
+        margin-left:25%;
+    }
+    .vam5{
+    margin-top:-12%;
+    }
+    .btn6{
+        width:200px;
+        padding:20px;   
+        background-color:lightgreen;
+        border:none;
+        border-radius:8px;
+        margin-left:0px;
+    }
+    .vam6{
+    margin-top:-12%;
+    }
+    h4,h3{
+        color:blue;
+        face:impact;
+        font-family:courier;
+    }
+{% endblock style%}
+
+  
+{% block content %}
+    
+     <button class="btn1"onclick="document.location='#'"><i class='fa fa-graduation-cap' style='font-size:36px;color:blue'></i>
+        <br><h3> Examination branch </h3></button>
+     <div class="vam2">
+         <button  class="btn2" onclick="document.location='#'"> <i class='fas fa-book-reader' style='font-size:30px;color:red'></i>
+            <br> <h4>students</h4></button>
+       </div>
+     <div class="vam3">
+     <button class="btn3" onclick="document.location='#'"><i class='fas fa-chalkboard-teacher' style='font-size:30px;color:red'></i> <br> <h4>teacher</h4> </button>
+     </div>
+     <div class="vam4">
+        <button class="btn4" onclick="document.location='#'"><i class='fas fa-chalkboard-teacher' style='font-size:30px;color:red'></i><br> <h4> Examination branch</h4> </button>
+        </div>
+        <div class="vam5">
+            <button class="btn5" onclick="document.location='#'"> <i class='fas fa-chalkboard-teacher' style='font-size:30px;color:red'></i><br><h4> Examination branch</h4> </button>
+            </div>
+            <div class="vam6">
+            <a href="https://www.facebook.com/"><button class="btn6" ><i class='fas fa-chalkboard-teacher' style='font-size:30px;color:red'></i><br> <h4> xxxx</h4> </button></a>
+                </div>
+     
+     
+
+
+{% endblock content %}
+
+
