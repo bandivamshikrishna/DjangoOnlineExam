@@ -157,8 +157,8 @@ STATICFILES_DIRS=[STATIC_DIR ]
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
-            'https://www.googleapis.com/auth/userinfo.email',
-            'https://www.googleapis.com/auth/userinfo.profile',
+            'email',
+            'profile',
         ],
         'AUTH_PARAMS': {
             'access_type': 'online',
@@ -212,3 +212,4 @@ LOGIN_URL='signin'
 
 LOGIN_REDIRECT_URL='afterlogin'
 
+LOGOUT_REDIRECT_URL='signin'

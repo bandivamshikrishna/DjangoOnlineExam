@@ -51,7 +51,7 @@ def after_login(request):
     if user.groups.filter(name='Students'):
         return HttpResponseRedirect('/student/dashboard/')
     if user.is_superuser:
-        return HttpResponseRedirect('/admin/dashboard/')
+        return HttpResponseRedirect('/admindashboard/')
     else:
 
         return HttpResponseRedirect('/student/')
@@ -69,5 +69,9 @@ def student_form(request):
 def admin_dashboard(request):
     return render(request,'core/admindashboard.html')
 
+
+def account_logout(request):
+    logout(request)
+    return HttpResponseRedirect('/signin/')
 
 
