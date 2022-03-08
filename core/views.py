@@ -5,6 +5,7 @@ from student import models as stu_models
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.forms import AuthenticationForm
 from student.forms import StudentForm
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -31,6 +32,7 @@ def sign_up(request):
 
 
 def sign_in(request):
+    if not request.user.is_authenticated:
         if request.method=='POST':
             authform=AuthenticationForm(request=request,data=request.POST)
             if authform.is_valid():
@@ -42,7 +44,10 @@ def sign_in(request):
                     return HttpResponseRedirect('afterlogin')
         else:
             authform=AuthenticationForm()
-        return render(request,'core/signin.html',{'authform':authform})
+            return render(request,'core/signin.html',{'authform':authform})
+    else:
+        return HttpResponseRedirect('afterlogin')
+        
 
 
 
@@ -63,9 +68,10 @@ def student_form(request):
     data=User.objects.get(first_name=user.first_name)
     student=StudentForm(instance=data)
     student2=SignUpForm(instance=data)
-
     return render(request,'student/studentforms.html',{'student':student,'student2':student2})
 
+
+@login_required
 def admin_dashboard(request):
     return render(request,'core/admindashboard.html')
 
