@@ -1,8 +1,112 @@
 {% extends 'core/adminbase.html' %}
 
 {% block style %}
+
+*{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
+    box-sizing:border-box;
+
+}
+nav{
+    background:lightgray;
+    height:50px;
+    width:150%;
+    margin-top:-170px;
+    margin-left:-50%;
+
+}
+nav ul{
+    float:left;
+
+}
+nav ul li{
+    display:inline-block;
+    line-height:40px;
+    margin:0 5px;
+    
+}
+.kk{
+    margin-left:300px;
+}
+.definesub{
+    display:block;
+    background-color:green;
+    width:200px;
+    padding:20px;
+    text-align:center;
+    text-decoration:none;
+    border:none;
+    border-radius:8px;
+    margin-left:-110px;
+    margin-top:50px;
+   }
+.topic{
+    display:block;
+    background-color:yellow;
+    width:200px;
+    padding:20px;
+    text-align:center;
+    text-decoration:none;
+    border:none;
+    border-radius:8px;
+    margin-left:200px;
+    margin-top:-85px;
+   }
+   .question{
+    display:block;
+    background-color:gray;
+    width:200px;
+    padding:20px;
+    text-align:center;
+    text-decoration:none;
+    border:none;
+    border-radius:8px;
+    margin-left:-110px;
+    margin-top:30px;
+}
+.exam{
+    display:block;
+    background-color:lightgreen;
+    width:200px;
+    padding:20px;
+    text-align:center;
+    text-decoration:none;
+    border:none;
+    border-radius:8px;
+    margin-left:200px;
+    margin-top:-85px;
+   }
+
+
+
+
 {% endblock style %}
 
 
 {% block content %}
+<nav>
+    
+        <div class="kk">
+            <ul>
+            
+        <li><a href="#"> <i class="fas fa-home"> </i></a></li> >
+        
+        <li><a href="#">Question Bank</a> </li> >
+        <li><a href="#">Subject</a> </li>
+        </ul>
+        </div>
+        
+    </nav>
+
+    <a href="" class="definesub"> <i class='fas fa-book-reader' style='font-size:30px;color:red'></i><br> <h4>Define Subject</h4></a>
+    <a href="" class="topic"> <i class='fas fa-book-reader' style='font-size:30px;color:red'></i><br> <h4>Define topic</h4></a>
+    <a href="" class="question"><i class='fa fa-question-circle' style='font-size:30px;color:red'></i><br> <h4>Define question</h4></a>
+    <a href="" class="exam"> <i class='fas fa-book-reader' style='font-size:30px;color:red'></i><br> <h4>exam managment</h4></a>
+
+
+
+        
 {% endblock content %}
