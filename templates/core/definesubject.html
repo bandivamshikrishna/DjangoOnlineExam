@@ -1,8 +1,88 @@
 {% extends 'core/adminbase.html' %}
 
 {% block style %}
+*{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
+    box-sizing:border-box;
+
+}
+nav{
+    background:lightgray;
+    height:50px;
+    width:150%;
+    margin-top:-170px;
+    margin-left:-50%;
+
+}
+nav ul{
+    float:left;
+
+}
+nav ul li{
+    display:inline-block;
+    line-height:40px;
+    margin:0 5px;
+    
+    
+}
+.kk{
+    margin-left:300px;
+}
+.new{
+    width:100px;
+    padding:20px;
+    background-color:lightgray;
+    color:blue;
+    border:none;
+    border-radius:4px;
+    margin-left:-22%;
+    margin-top:20px;
+}
+.count{
+    width:200px;
+    padding:20px;
+    background-color:lightgray;
+    color:blue;
+    border:none;
+    border-radius:4px;
+    margin-left:-22%;
+    margin-top:20px;
+}
+table{
+    margin-left:-22%;
+    margin-top:20px;
+}
+
 {% endblock style %}
 
 
 {% block content %}
+<nav>
+    
+    <div class="kk">
+        <ul>
+        
+    <li><a href="#"> <i class="fas fa-home"> </i></a></li> >
+    
+    <li><a href="#">Question Bank</a> </li> >
+    <li><a href="#">Subject</a> </li>
+    </ul>
+    </div>
+    
+</nav>
+<a href="www.google.com" ><button type="button" class="new"><i class="fa fa-plus-circle" aria-hidden="true"> NEW </i></button></a>
+<div>
+<button type="button" class="count"> <i class="fa fa-book" aria-hidden="true">Total subjects(s) count:3 </i></button>
+</div>
+<div>
+<table border="1" height="100" width="800" text-align="center" cellpadding="0" cellspacing="0">
+    <tr align="center" bgcolor="lightgray"><td>S.no</td><td> subject Name</td><td> Edit</td><td>Delete</td>
+        <tr align="center"><td>1</td><td> </td><td><a href="#" ><i class="far fa-edit" style='font-size:15px;color:blue'></i></a></td><td> <a href="#" ><i class="fas fa-trash-alt"style='font-size:15px;color:red'></i></a></td>
+            <tr align="center" bgcolor="lightgray"><td>2</td><td> </td><td><a href="#" ><i class="far fa-edit" style='font-size:15px;color:blue'></i></a></td><td> <a href="#" ><i class="fas fa-trash-alt"style='font-size:15px;color:red'></i></a></td>
+                <tr align="center"><td>3</td><td> </td><td><a href="#" ><i class="far fa-edit" style='font-size:15px;color:blue'></i></a></td><td> <a href="#" ><i class="fas fa-trash-alt"style='font-size:15px;color:red'></i></a></td>
+                </table></div>
+
 {% endblock content %}
