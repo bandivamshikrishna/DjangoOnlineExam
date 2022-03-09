@@ -30,6 +30,16 @@ urlpatterns = [
     path('logout',views.account_logout,name='logout'),
     path('student/',views.student_form,name='student'),
     path('admineb/',views.admin_examination_branch,name='admineb'),
-    path('admineb/definesubject/',views.admineb_define_subject,name='adminebdefinesubject'),
+    path('admineb/subject/',views.admineb_subject,name='adminebsubject'),
+    path('admineb/subject/new',views.admineb_subject_new,name='adminebsubjectnew'),
+    path('admineb/subject/edit',views.admineb_subject_edit,name='adminebsubjectedit'),
+    path('admineb/topic/',views.admineb_topic,name='adminebtopic'),
+    path('admineb/topic/new',views.admineb_new_topic,name='adminebtopicnew'),
+    path('admineb/topic/edit',views.admineb_edit_topic,name='adminebtopicedit'),
+    path('admineb/question/',views.admineb_question,name='adminebquestion'),
+    path('admineb/question/new/',views.admineb_new_question,name='adminebquestionnew'),
+    path('admineb/question/edit/',views.admineb_edit_question,name='adminebquestionedit'),
+
+    
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

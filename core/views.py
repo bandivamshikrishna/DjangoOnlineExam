@@ -87,6 +87,41 @@ def admin_examination_branch(request):
 
 
 @login_required
-def admineb_define_subject(request):
+def admineb_subject(request):
     return render(request,'core/definesubject.html')
 
+
+@login_required
+def admineb_subject_new(request):
+    return render(request,'core/definenewsubject.html')
+
+@login_required
+def admineb_subject_edit(request):
+    return render(request,'core/defineeditsubject.html')
+
+
+@login_required
+def admineb_topic(request):
+    return render(request,'core/definetopic.html')
+
+
+@login_required
+def admineb_new_topic(request):
+    return render(request,'core/definenewtopic.html')
+
+
+@login_required
+def admineb_edit_topic(request):
+    return render(request,'core/defineedittopic.html')
+
+@login_required
+def admineb_question(request):
+    return render(request,'core/definequestion.html')
+
+@login_required
+def admineb_new_question(request):
+    return render(request,'core/definenewquestion.html')
+
+@login_required
+def admineb_edit_question(request):
+    return render(request,'core/defineeditquestion.html')
