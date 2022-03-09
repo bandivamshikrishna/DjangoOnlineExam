@@ -151,10 +151,7 @@ a:active {
             margin-top:200px;
             width: 500;
         }
-            select#membership option{
-                border:none;
-                width:px;
-            }
+            
             
             {% block style %}
             {% endblock style %}
@@ -166,9 +163,7 @@ a:active {
     <input type="checkbox" id="check">
 <!--header area starts-->
 <header>
-    
-    
-        
+   
 
     <div class="right-area">
         <a href="{% url 'logout' %}" class="logout-btn">logout</a>
@@ -179,9 +174,9 @@ a:active {
 <!--side bar start-->
 <div class="sidebar">
     <label for="check">
-    <div class="bars">
-    <i class="fas fa-bars" id="sidebar_btn"></i>
-    </label>
+        <div class="bars">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
     </div>
 <center>
             <img src="teach(2).png" class="profile-image" alt=" ">
@@ -193,8 +188,8 @@ a:active {
     </center>
 <!--side bar end-->
 
-<a href="{% url 'admindashboard' %}"><i class="fas fa-home"><span>Dash board</span></i></a>
-<a href="{% url 'admineb' %}"><i class="fas fa-graduation-cap">Examination Brach</i></a>
+<a href="{% url 'admindashboard' %}"><i class="fas fa-home"><span>Dashboard</span></i></a>
+<a href=""><i class="fas fa-graduation-cap"><span>Examination Branch</span></i></a>
 <a href="#"><i class="fas fa-question-circle"><span>manage question</span></i></a>
 </div>
 

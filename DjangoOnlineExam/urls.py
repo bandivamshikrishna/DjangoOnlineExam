@@ -29,6 +29,7 @@ urlpatterns = [
     path('admindashboard/',views.admin_dashboard,name='admindashboard'),
     path('logout',views.account_logout,name='logout'),
     path('student/',views.student_form,name='student'),
-    path('admineb/',views.admin_examination_branch,name='admineb')
+    path('admineb/',views.admin_examination_branch,name='admineb'),
+    path('admineb/definesubject/',views.admineb_define_subject,name='adminebdefinesubject'),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

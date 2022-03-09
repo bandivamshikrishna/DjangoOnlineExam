@@ -86,3 +86,7 @@ def admin_examination_branch(request):
     return render(request,'core/examinationbranch.html')
 
 
+@login_required
+def admineb_define_subject(request):
+    return render(request,'core/definesubject.html')
+
